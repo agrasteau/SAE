@@ -1,9 +1,9 @@
 <?php
 // Connexion à la base de données (remplacez ces valeurs par les vôtres)
-    $utilisateur = "inf2pj02";
-    $serveur = "localhost";
-    $motdepasse = "ahV4saerae";
-    $basededonnees = "inf2pj_02";
+$utilisateur = "root";
+$serveur = "localhost";
+//$motdepasse = "root";
+$basededonnees = "sae3";
 
 
 // Récupération des données du formulaire
@@ -22,14 +22,14 @@ $profession = isset($_POST['profession']) ? $_POST['profession'] : '';
 
 $connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees);
 // Récupération de la valeur maximum de Id_Uti
-$requete = "SELECT MAX(Id_Uti) AS id_max FROM UTILISATEUR";
+$requete = "SELECT MAX(Id_Uti) AS id_max FROM utilisateur";
 $resultat = $connexion->query($requete);
 $id_max = $resultat->fetch_assoc()['id_max'];
 
 // Incrémentation de la valeur de $iduti
 $iduti = $id_max + 1;
 // Requête SQL d'insertion
-$insertion = "INSERT INTO UTILISATEUR (Id_Uti, Prenom_Uti, Nom_Uti, Adr_Uti, Pwd_Uti, Mail_Uti) VALUES ('$iduti', '$prenom', '$nom', '$adresse', '$pwd', '$Mail_Uti');";
+$insertion = "INSERT INTO utilisateur (Id_Uti, Prenom_Uti, Nom_Uti, Adr_Uti, Pwd_Uti, Mail_Uti) VALUES ('$iduti', '$prenom', '$nom', '$adresse', '$pwd', '$Mail_Uti');";
 
 $connexion1 = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees);
 
@@ -40,7 +40,7 @@ if ($connexion1->query($insertion) === TRUE) {
     echo "Erreur : " . $insertion . "<br>" . $connexion1->error;
 }
 if (isset($profession)){
-    $requete1 = "SELECT MAX(Id_Prod) AS id_max1 FROM PRODUCTEUR";
+    $requete1 = "SELECT MAX(Id_Prod) AS id_max1 FROM producteur";
     var_dump($requete1);
     echo("<br>");
     $resultat1 = $connexion1->query($requete1);
@@ -53,7 +53,7 @@ if (isset($profession)){
     $id_max_prod++;
     var_dump($id_max_prod);
     echo("<br>");
-    $insertion1 = "INSERT INTO PRODUCTEUR (Id_Uti, Id_Prod, Prof_Prod) VALUES ('$iduti', '$id_max_prod', '$profession');";
+    $insertion1 = "INSERT INTO producteur (Id_Uti, Id_Prod, Prof_Prod) VALUES ('$iduti', '$id_max_prod', '$profession');";
     
     var_dump($insertion1);
     echo("<br>");

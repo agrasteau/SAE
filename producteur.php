@@ -7,11 +7,11 @@
 <body>
     <?php
      function dbConnect(){
-        $utilisateur = "inf2pj02";
-        $serveur = "localhost";
-        $motdepasse = "ahV4saerae";
-        $basededonnees = "inf2pj_02";
-        return new PDO('mysql:host='.$serveur.';dbname='.$basededonnees,$utilisateur,$motdepasse);
+        $host = 'localhost';
+        $dbname = 'sae3';
+        $user = 'root';
+        $password = '';
+        return new PDO('mysql:host='.$host.';dbname='.$dbname,$user,$password);
       }
       // variable utilisée plusieurs fois par la suite
       $Id_Prod = $_GET["Id_Prod"];

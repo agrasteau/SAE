@@ -1,10 +1,10 @@
 <?php
 
 // Connexion à la base de données (remplacez ces valeurs par les vôtres)
-$utilisateur = "inf2pj02";
+$utilisateur = "root";
 $serveur = "localhost";
-$motdepasse = "ahV4saerae";
-$basededonnees = "inf2pj_02";
+//$motdepasse = "root";
+$basededonnees = "sae3";
 
 // Création de la connexion
 $connexion = new mysqli($serveur, $utilisateur, "", $basededonnees);

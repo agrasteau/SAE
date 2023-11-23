@@ -1,5 +1,5 @@
 <?php
-//traitement formulaire sin in php
+
 // Récupération des données du formulaire
 $pwd = $_POST['pwd'];
 $Mail_Uti = $_POST['mail'];
@@ -11,12 +11,12 @@ if (!isset($_SESSION['test_pwd'])) {
 }
 
 
-$utilisateur = "inf2pj02";
-$serveur = "localhost";
-$motdepasse = "ahV4saerae";
-$basededonnees = "inf2pj_02";
+$host = 'localhost';
+$dbname = 'sae3';
+$user = 'root';
+$password = '';
 $bdd = new PDO('mysql:host='.$host.';dbname='.$dbname,$user,$password);
-$query = $bdd->query(('SELECT Id_Uti FROM UTILISATEUR WHERE UTILISATEUR.Mail_Uti=\''.$Mail_Uti.'\';'));
+$query = $bdd->query(('SELECT Id_Uti FROM utilisateur WHERE utilisateur.Mail_Uti=\''.$Mail_Uti.'\';'));
 $Id_Uti = $query->fetchAll(PDO::FETCH_ASSOC);
 $Id_Uti=($Id_Uti[0]["Id_Uti"]);
 if ($Id_Uti == NULL){

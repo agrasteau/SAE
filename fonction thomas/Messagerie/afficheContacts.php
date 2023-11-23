@@ -2,14 +2,13 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-function dbConnect(){    
-    $utilisateur = "inf2pj02";
-    $serveur = "localhost";
-    $motdepasse = "ahV4saerae";
-    $basededonnees = "inf2pj_02";
+function dbConnect(){
+    $host = 'localhost';
+    $dbname = 'sae3';
+    $user = 'root';
+    $password = '';
 
-
-    return new PDO('mysql:host='.$serveur.';dbname='.$basededonnees.';charset=utf8',$utilisateur,$motdepasse);
+    return new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8',$user,$password);
 }
 
 function afficheContacts($id_user){
