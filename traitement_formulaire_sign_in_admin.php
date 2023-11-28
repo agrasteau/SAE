@@ -59,6 +59,7 @@ try {
                 <p>Désolé, vous n'avez pas l'autorisation d'accéder à cette page.</p>
                 " );
             }else {
+                $_SESSION["is_admin"]=true;
                 header('Location: panel_admin.php');
             }
         } else {
