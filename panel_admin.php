@@ -45,5 +45,5 @@
             </div>
         </div>
     </div>
-    <?php require "/home/inf2pj02/popups/gestionPopups.php" ?>
+    <?php require "/~inf2pj02/popups/gestion_popups.php" ?>
 </body>

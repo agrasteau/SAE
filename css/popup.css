@@ -1,0 +1,108 @@
+.lienPopup{
+    border: none;
+    background: none;
+    color: #305514;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.popup{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #2c441563;
+}
+
+.contenuPopup{
+    max-width: 50%;
+    width: 50%;
+    min-width: fit-content;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 2px solid #525252;
+    border-radius: 20px;
+
+    display:grid;
+    row-gap: 10px;
+}
+
+.contenuPopupAlt{
+    max-height: 50%;
+    max-width: 50%;
+    width: 50%;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 2px solid #525252;
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+.boutonQuitPopup{
+    background: url('../img/quit.svg') no-repeat;
+    background-size: 30px 30px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+
+.titrePopup{
+    margin: 5px;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: 550;
+    font-size: 21px;
+}
+
+
+.formPopup{
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #598B2C;
+    background: #EBF4EC;
+    box-shadow: 2px 2px 4px 0px rgba(55, 55, 55, 0.25) inset;
+    display: grid;
+    row-gap: 5px;
+}
+
+
+
+
+.zoneDeTextePopup{
+    border-radius: 5px;
+    border: 1px solid #808080;
+    background: #ffffff;
+    font-size: 16px;
+}
+
+.popup label{
+    font-size: 19px;
+}
+
+.boutonPopup{
+    margin: 3px;
+    width: fit-content;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+    border: 1px solid #598B2C;
+    background: #FFF;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+}
+
+.text{
+    margin: 0;
+}
