@@ -19,6 +19,14 @@
         <div class="rightColumn">
             <div class="contenuPage">
 
+                <form action="traitement_broadcast_user.php" method="post">
+                    <label for="message">Votre message :</label>
+                    <textarea id="message" name="message" rows="5" maxlength="5000" required></textarea>
+
+                    <br>
+
+                    <input type="submit" value="Envoyer le message a tout les utilisateurs">
+                </form>
                <!-- some code -->
 
             </div>
