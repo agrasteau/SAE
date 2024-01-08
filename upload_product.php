@@ -1,5 +1,4 @@
-<?php
-    require "language.php" ; 
+<?php 
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vérifier si le fichier a été correctement téléchargé
