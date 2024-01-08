@@ -27,6 +27,8 @@ $htmlAchats="Achats";
 $htmlProduits="Produits";
 $htmlCommandes="Commandes";
 $htmlPanelAdmin="Panel Admin";
+$htmlbroadcastuser="message aux utilisateurs";
+$htmlbroadcastprod="message aux producteurs";
 $htmlSeConnecter="Se Connecter";
 $htmlProducteursEnMaj="PRODUCTEURS :";
 $htmlImageUtilisateur="Image utilisateur";
@@ -97,7 +99,7 @@ $html="";
 ?>
 
 
-<?php/*
+<?php /*
 '.$htmlSupprimer.'
 
 ".$htmlPiece."
