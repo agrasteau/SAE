@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php
+    require "language.php" ; 
+?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page PHP</title>
 </head>
 <body>
 
@@ -16,7 +18,7 @@ if(isset($_GET['message'])) {
     echo '<p>' . $message . '</p>';
 } else {
     // Afficher un message par défaut si 'message' n'est pas défini
-    echo '<p>Accès refusé</p>';
+    echo '<p>'.$htmlAccesRefuse.'</p>';
 }
 ?>
 
