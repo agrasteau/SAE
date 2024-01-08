@@ -25,14 +25,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         unlink( $targetPath ); 
         // Déplacer le fichier téléchargé vers le dossier de destination
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetPath)) {
-            echo "<br>L'image a été téléchargée avec succès. Nouveau nom du fichier : $newFileName<br>";
+            echo "<br> $htmlImgTelecSucces, $newFileName<br>";
         } else {
-            echo "Le déplacement du fichier a échoué. Erreur : " . error_get_last()['message'] . "<br>";
+            echo $htmlImgTelecRate . error_get_last()['message'] . "<br>";
             header('Location: mes_produits.php?erreur='. error_get_last()['message'] );
         }
 
     } else {
-        echo "Veuillez sélectionner une image.<br>";
+        echo $htmlSelecImg."<br>";
     }
     
     header('Location: produits.php');    
