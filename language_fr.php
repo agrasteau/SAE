@@ -80,9 +80,9 @@ $htmlImageNonFournie="Image non fournie";
 $htmlStockDeuxPoints="Stock : ";
 $htmlModification="Modification";
 $htmlSupprimer="Supprimer";
-$html="";
-$html="";
-$html="";
+$htmlNomProduit="nom du produit";
+$htmlImageDeuxPoints="Image :";
+$htmlAjouterLeProduit="Ajouter le produit";
 $html="";
 $html="";
 $html="";
@@ -99,10 +99,9 @@ $html="";
 ?>
 
 
-<?php /*
-'.$htmlSupprimer.'
+<?php/*
+'.$htmlImageNonFournie.'
 
 ".$htmlPiece."
 
-<?php echo $htmlImageNonFournie?>
-*/?>
+<?php echo $htmlMesProduitsEnStock?>*/?>
