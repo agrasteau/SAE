@@ -7,7 +7,7 @@
 				<input type="submit" value="" class="boutonQuitPopup">
                 <input type="hidden" name="popup" value="">
 		</form>
-        <p class="titrePopup"><?php echo $htmldondGenUti?></p>
+        <p class="titrePopup"><?php echo $htmlCondGenUti?></p>
         <div>
             <div class="formPopup">
                 <p class="text">
