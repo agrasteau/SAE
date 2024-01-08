@@ -99,7 +99,7 @@ $html="";
 ?>
 
 
-<?php/*
+<?php /*
 '.$htmlImageNonFournie.'
 
 ".$htmlPiece."
