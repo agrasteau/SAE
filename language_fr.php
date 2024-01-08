@@ -27,8 +27,6 @@ $htmlAchats="Achats";
 $htmlProduits="Produits";
 $htmlCommandes="Commandes";
 $htmlPanelAdmin="Panel Admin";
-$htmlbroadcastuser="message aux utilisateurs";
-$htmlbroadcastprod="message aux producteurs";
 $htmlSeConnecter="Se Connecter";
 $htmlProducteursEnMaj="PRODUCTEURS :";
 $htmlImageUtilisateur="Image utilisateur";
@@ -80,9 +78,9 @@ $htmlImageNonFournie="Image non fournie";
 $htmlStockDeuxPoints="Stock : ";
 $htmlModification="Modification";
 $htmlSupprimer="Supprimer";
-$html="";
-$html="";
-$html="";
+$htmlNomProduit="nom du produit";
+$htmlImageDeuxPoints="Image :";
+$htmlAjouterLeProduit="Ajouter le produit";
 $html="";
 $html="";
 $html="";
@@ -99,10 +97,9 @@ $html="";
 ?>
 
 
-<?php /*
-'.$htmlSupprimer.'
+<?php/*
+'.$htmlImageNonFournie.'
 
 ".$htmlPiece."
 
-<?php echo $htmlImageNonFournie?>
-*/?>
+<?php echo $htmlMesProduitsEnStock?>*/?>
