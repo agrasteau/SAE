@@ -1,3 +1,3 @@
 <?php
-    require "language_al.php" ; 
+    require "language_fr.php" ; 
 ?>
