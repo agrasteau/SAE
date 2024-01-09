@@ -1,5 +1,5 @@
 <?php
-    require "language.php" ; 
+    require "../../language.php" ; 
 ?>
 <?php
     $enteredCode = $_POST["code"];
