@@ -6,7 +6,7 @@ if(!isset($_SESSION)){
 
 // Database connection
 $utilisateur = "inf2pj02";
-$serveur = "localhost";
+$serveur = "db";
 $motdepasse = "ahV4saerae";
 $basededonnees = "inf2pj_02";
 // Connect to database

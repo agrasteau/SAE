@@ -7,7 +7,7 @@ $email = $_POST["email"];
 $_SESSION["mailTemp"]=$email;
 
 $utilisateur = "inf2pj02";
-$serveur = "localhost";
+$serveur = "db";
 $motdepasse = "ahV4saerae";
 $basededonnees = "inf2pj_02";
 $bdd = new PDO('mysql:host=' . $serveur . ';dbname=' . $basededonnees, $utilisateur, $motdepasse);

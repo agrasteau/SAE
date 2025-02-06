@@ -4,7 +4,7 @@
 <?php
      function dbConnect(){
         $utilisateur = "inf2pj02";
-        $serveur = "localhost";
+        $serveur = "db";
         $motdepasse = "ahV4saerae";
         $basededonnees = "inf2pj_02";
         return new PDO('mysql:host=' . $serveur . ';dbname=' . $basededonnees, $utilisateur, $motdepasse);
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $targetDir = __DIR__ . "/img_produit/";
         // Obtenir le nom du fichier téléchargé
         $utilisateur = "inf2pj02";
-        $serveur = "localhost";
+        $serveur = "db";
         $motdepasse = "ahV4saerae";
         $basededonnees = "inf2pj_02";
 

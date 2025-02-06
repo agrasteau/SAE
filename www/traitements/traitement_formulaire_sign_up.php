@@ -15,7 +15,7 @@ $_SESSION['Mail_Temp']=$Mail_Uti;
 
 // Connexion à la base de données 
 $utilisateur = "inf2pj02";
-$serveur = "localhost";
+$serveur = "db";
 $motdepasse = "ahV4saerae";
 $basededonnees = "inf2pj_02";
 $connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees);

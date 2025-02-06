@@ -4,7 +4,7 @@ if (isset($_POST['new_nom'], $_POST['new_prenom'], $_POST['rue'], $_POST['code']
     $adr = $_POST['rue'] .", ". $_POST['code']. " ".mb_strtoupper($_POST['ville']);
 
     $utilisateur = "inf2pj02";
-    $serveur = "localhost";
+    $serveur = "db";
     $motdepasse = "ahV4saerae";
     $basededonnees = "inf2pj_02";
     $bdd = new PDO('mysql:host='.$serveur.';dbname='.$basededonnees,$utilisateur,$motdepasse);
