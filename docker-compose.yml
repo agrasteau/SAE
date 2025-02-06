@@ -42,6 +42,7 @@ services:
       - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
+      - ./www/gestioDB.sql:/docker-entrypoint-initdb.d/gestioDB.sql # Monter le fichier SQL dans le répertoire d'initialisation
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
