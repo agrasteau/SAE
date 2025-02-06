@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  apache:
+    image: php:8.2-apache
+    container_name: apache_server
+    restart: always
+    ports:
+      - "8082:80"
+    volumes:
+      - ./www:/var/www/html
+      - ./apache-config:/etc/apache2/sites-available
+    depends_on:
+      - db
+    command: >
+      bash -c "echo 'ServerName localhost' >> /etc/apache2/apache2.conf && \
+               a2enmod rewrite && \
+               chown -R www-data:www-data /var/www/html && \
+               chmod -R 755 /var/www/html && \
+               apache2-foreground"
+
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ahV4saerae
+      MYSQL_DATABASE: inf2pj_02
+      MYSQL_USER: inf2pj02
+      MYSQL_PASSWORD: ahV4saerae
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - "8083:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: ahV4saerae
+    depends_on:
+      - db
+
+volumes:
+  db_data:
