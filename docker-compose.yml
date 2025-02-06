@@ -10,9 +10,11 @@ services:
     volumes:
       - ./www:/var/www/html
       - ./apache-config:/etc/apache2/sites-available
+      - ./apache-config/php.ini:/usr/local/etc/php/conf.d/99-custom-php.ini  # Monter le fichier php.ini personnalisé
     depends_on:
       - db
     environment:
+      - PHP_OUTPUT_BUFFERING=On
       - HTTP_PROXY=http://proxy.univ-lemans.fr:3128
       - HTTPS_PROXY=http://proxy.univ-lemans.fr:3128
       - http_proxy=http://proxy.univ-lemans.fr:3128
@@ -22,10 +24,10 @@ services:
                 docker-php-ext-install mysqli && \
                 docker-php-ext-install pdo_mysql && \
                 echo 'ServerName localhost' >> /etc/apache2/apache2.conf && \
-                a2enmod rewrite && \
-                chown -R www-data:www-data /var/www/html && \
-                chmod -R 755 /var/www/html && \
-                apache2-foreground"
+               a2enmod rewrite && \
+               chown -R www-data:www-data /var/www/html && \
+               chmod -R 755 /var/www/html && \
+               apache2-foreground"
 
   db:
     image: mysql:8.0
