@@ -19,13 +19,13 @@ services:
       - https_proxy=http://proxy.univ-lemans.fr:3128
     command: >
       bash -c "apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev && \
-               docker-php-ext-install pdo_mysql && \
-               echo 'ServerName localhost' >> /etc/apache2/apache2.conf && \
-               a2enmod rewrite && \
-               chown -R www-data:www-data /var/www/html && \
-               chmod -R 755 /var/www/html && \
-               apache2-foreground"
-
+                docker-php-ext-install mysqli && \
+                docker-php-ext-install pdo_mysql && \
+                echo 'ServerName localhost' >> /etc/apache2/apache2.conf && \
+                a2enmod rewrite && \
+                chown -R www-data:www-data /var/www/html && \
+                chmod -R 755 /var/www/html && \
+                apache2-foreground"
 
   db:
     image: mysql:8.0
